@@ -1,18 +1,6 @@
----
-output: github_document
----
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
-
-# maxnetmap
+### maxnetmap
 
 The goal of maxnetmap is to create a 
 raster from a spatial distribution model fitted with glmnet via maxnet 
@@ -54,6 +42,11 @@ pts <- spocc::occ("Oryza sativa", geometry = as.vector(model_extent) ) %>%
 #plot a layer with the points
 plot(modelEnv[[1]])
 points(pts[ ,2:3],col="red", pch=20, cex=0.3)
+
+
+#feature classes (Could be linear, product,
+# cuadratic, hinge or combination of all of them)
+fclasses = "lpq"
 
 # get a maxent model with the raster
 me <- maxentRaster(modelEnv, pts[ ,2:3], fclasses)
