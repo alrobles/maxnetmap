@@ -45,7 +45,7 @@ points(pts[ ,2:3],col="red", pch=20, cex=0.3)
 
 
 #feature classes (Could be linear, product,
-# cuadratic, hinge or combination of all of them)
+# quadratic, hinge or combination of all of them)
 fclasses = "lpq"
 
 # get a maxent model with the raster
